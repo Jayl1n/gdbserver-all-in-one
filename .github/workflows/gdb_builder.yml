@@ -29,23 +29,23 @@ jobs:
         run: |
           sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION arm
 
-      - name: aarch64 cross building
-        run: |
-          sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION aarch64
+      #- name: aarch64 cross building
+      #  run: |
+      #   sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION aarch64
 
-      - name: mips cross building
-        run: |
-          sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION mips
+      #- name: mips cross building
+      #  run: |
+      #   sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION mips
 
-      - name: riscv64 cross building
-        run: |
-          sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION riscv64
+      #- name: riscv64 cross building
+      # run: |
+      #   sudo chmod +x ./builder.sh && sudo ./builder.sh $GDB_VERSION riscv64
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: /releases/*
+      #- name: Upload artifact
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: my-artifact
+      #    path: /releases/*
 
       # - uses: shaowenchen/debugger-action@v1
       #   name: debugger
